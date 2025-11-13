@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Workshop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/monokai.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal code {
+            background: #3f3f3f;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .reveal pre code {
+            max-height: 500px;
+        }
+        .highlight-blue {
+            color: #42affa;
+        }
+        .highlight-green {
+            color: #5df4a2;
+        }
+        .small-text {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <h1>Vibe Coding Workshop</h1>
+                <p>AI-Powered Development Tools</p>
+            </section>
+
+            <!-- Tools Overview -->
+            <section>
+                <h2>Today's Tools</h2>
+                <ul>
+                    <li class="fragment">Site Studio</li>
+                    <li class="fragment">Gemini CLI</li>
+                    <li class="fragment">GitHub Copilot</li>
+                    <li class="fragment">GitHub Desktop</li>
+                    <li class="fragment">Claude Code (Final Demo)</li>
+                </ul>
+            </section>
+
+            <!-- Important Notice -->
+            <section>
+                <h2>Before We Start</h2>
+                <p class="highlight-blue">For NML machines:</p>
+                <ul>
+                    <li>Sign in ahead of time</li>
+                    <li>Set up dependencies</li>
+                </ul>
+                <p class="fragment small-text">Reach out in advance to preempt sign up issues</p>
+            </section>
+
+            <!-- Ice Breaker -->
+            <section>
+                <h2>Ice Breaker: Site Studio</h2>
+                <p><a href="https://tools.cuny.qzz.io/site-studio/" target="_blank">tools.cuny.qzz.io/site-studio/</a></p>
+                <p class="highlight-green">Model: Claude Sonnet 4.5</p>
+                <p class="fragment small-text">After initial demo, we'll solicit follow-up prompts from participants</p>
+            </section>
+
+            <!-- Command Line Section -->
+            <section>
+                <h2>Command Line Basics</h2>
+                <p>Let's get comfortable with the terminal</p>
+            </section>
+
+            <section>
+                <h3>Opening Your Terminal</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <p><strong>Mac:</strong></p>
+                        <ol class="small-text">
+                            <li>Press <code>Cmd + Space</code></li>
+                            <li>Type "Terminal"</li>
+                            <li>Press Return</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p><strong>Windows:</strong></p>
+                        <ol class="small-text">
+                            <li>Press Windows key</li>
+                            <li>Type "PowerShell"</li>
+                            <li>Press Enter</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Essential Commands</h3>
+                <table class="small-text">
+                    <tr>
+                        <td><code>ls</code></td>
+                        <td>List files & folders in current directory</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td><code>mkdir &lt;name&gt;</code></td>
+                        <td>Create a new folder</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td><code>cd &lt;name&gt;</code></td>
+                        <td>Move into a specific folder</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td><code>pwd</code></td>
+                        <td>Show your current location</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td><code>cd ..</code></td>
+                        <td>Move up one level to parent directory</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>Command Line Syntax</h3>
+                <pre><code class="bash">command --option &lt;placeholder-argument&gt;</code></pre>
+                <p class="fragment small-text">Example: <code>mkdir my-project</code></p>
+            </section>
+
+            <!-- Installing Gemini CLI -->
+            <section>
+                <h2>Installing Gemini CLI</h2>
+            </section>
+
+            <section>
+                <h3>Windows (PowerShell)</h3>
+                <ol>
+                    <li>Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></li>
+                    <li class="fragment">Install Gemini CLI:
+                        <pre><code class="bash">npm install -g @google/gemini-cli</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>macOS (Terminal)</h3>
+                <ol>
+                    <li>Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></li>
+                    <li class="fragment">Install Gemini CLI:
+                        <pre><code class="bash">brew install gemini-cli</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Project Tracks -->
+            <section>
+                <h2>Choose Your Project Track</h2>
+                <div class="fragment">
+                    <p class="highlight-blue">Website</p>
+                    <p class="small-text">Portfolio, link tree, small HTML/CSS/JS pages</p>
+                </div>
+                <div class="fragment">
+                    <p class="highlight-green">Visualization</p>
+                    <p class="small-text">Simple map, chart, or interactive element</p>
+                </div>
+                <div class="fragment">
+                    <p class="highlight-blue">Program/Script</p>
+                    <p class="small-text">Basic Python task (text parsing, data cleanup, small utility)</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Hands-On Activity</h2>
+                <p><strong>Duration:</strong> 15-20 minutes (or whatever you want!)</p>
+                <p class="fragment">We'll walk around the room to help</p>
+                <p class="fragment small-text">Choose your track and start building!</p>
+            </section>
+
+            <!-- Google AI Student Account -->
+            <section>
+                <h2>Free Google AI for Students</h2>
+                <p class="highlight-green">1-year free trial of Google AI Pro plan</p>
+                <ul class="small-text">
+                    <li>Gemini "Pro" access</li>
+                    <li>Deep Research</li>
+                    <li>NotebookLM upgrades</li>
+                    <li>2TB storage</li>
+                </ul>
+                <p class="fragment small-text">Requires SheerID verification and personal Gmail</p>
+                <p class="fragment small-text">Auto-renews at $19.99/mo after year (can cancel)</p>
+            </section>
+
+            <!-- Additional Tools -->
+            <section>
+                <h2>More AI Development Tools</h2>
+            </section>
+
+            <section>
+                <h3>GitHub Copilot</h3>
+                <p>AI pair programmer integrated into your editor</p>
+                <ul class="small-text fragment">
+                    <li>Code suggestions as you type</li>
+                    <li>Supports multiple languages</li>
+                    <li>Available in VS Code, JetBrains, and more</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>GitHub Desktop</h3>
+                <p>Visual interface for Git version control</p>
+                <ul class="small-text fragment">
+                    <li>No command line needed</li>
+                    <li>Easy commit and branch management</li>
+                    <li>Perfect for beginners</li>
+                </ul>
+            </section>
+
+            <!-- Final Demo -->
+            <section>
+                <h2>Final Demo</h2>
+                <h1 class="highlight-blue">Claude Code</h1>
+                <p class="fragment">AI assistant for your entire development workflow</p>
+            </section>
+
+            <section>
+                <h3>What is Claude Code?</h3>
+                <ul>
+                    <li class="fragment">Command-line AI assistant</li>
+                    <li class="fragment">Reads, edits, and creates files</li>
+                    <li class="fragment">Runs commands and tests</li>
+                    <li class="fragment">Understands your entire codebase</li>
+                </ul>
+            </section>
+
+            <!-- Closing -->
+            <section>
+                <h2>Thank You!</h2>
+                <p>Questions?</p>
+                <p class="fragment small-text">Let's build something amazing together</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+    </script>
+</body>
+</html>
