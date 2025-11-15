@@ -31,9 +31,9 @@ Need help? Just ask!
 
 [tools.cuny.qzz.io/site-studio/](https://tools.cuny.qzz.io/site-studio/)
 
-**Model: Claude Sonnet 4.5**
+**Powered by Claude Sonnet 4.5**
 
-After initial demo, share your ideas for follow-up prompts
+After the opening demo, share your ideas for follow-up prompts
 
 ---
 
@@ -68,16 +68,6 @@ Let's get comfortable with the terminal
 | `cd <name>` | Move into a specific folder |
 | `pwd` | Show your current location |
 | `cd ..` | Move up one level to parent directory |
-
----
-
-### Command Line Syntax
-
-```bash
-command --option <placeholder-argument>
-```
-
-Example: `mkdir my-project`
 
 ---
 
