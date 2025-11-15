@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe Coding Workshop</title>
+    <title>Co-Developing with Generative AI</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
@@ -26,6 +26,9 @@
         .highlight-green {
             color: #5df4a2;
         }
+        .highlight-orange {
+            color: #ff9500;
+        }
         .small-text {
             font-size: 0.8em;
         }
@@ -37,39 +40,42 @@
 
             <!-- Title Slide -->
             <section>
-                <h1>Vibe Coding Workshop</h1>
-                <p>AI-Powered Development Tools</p>
+                <h1>Co-Developing with Generative AI</h1>
+                <p>Introduction to Command Line Agents</p>
             </section>
 
             <!-- Tools Overview -->
             <section>
                 <h2>Today's Tools</h2>
-                <ul>
-                    <li class="fragment">Site Studio</li>
-                    <li class="fragment">Gemini CLI</li>
-                    <li class="fragment">GitHub Copilot</li>
-                    <li class="fragment">GitHub Desktop</li>
-                    <li class="fragment">Claude Code (Final Demo)</li>
-                </ul>
+                <p class="fragment">Site Studio</p>
+                <p class="fragment">Terminal/PowerShell</p>
+                <p class="fragment">Gemini CLI</p>
             </section>
 
             <!-- Important Notice -->
             <section>
                 <h2>Before We Start</h2>
-                <p class="highlight-blue">For NML machines:</p>
-                <ul>
-                    <li>Sign in ahead of time</li>
-                    <li>Set up dependencies</li>
-                </ul>
-                <p class="fragment small-text">Reach out in advance to preempt sign up issues</p>
+                <div class="fragment">
+                    <p class="highlight-blue">Using lab computers?</p>
+                    <p class="small-text">Sign in now</p>
+                </div>
+                <div class="fragment">
+                    <p class="highlight-green">Brought your own computer?</p>
+                    <p class="small-text">Make sure you can access your terminal/PowerShell</p>
+                </div>
+                <div class="fragment">
+                    <p class="highlight-orange"><strong>Everyone:</strong></p>
+                    <p class="small-text">We'll help you install required tools as we go</p>
+                </div>
+                <p class="fragment small-text">Need help? Just ask!</p>
             </section>
 
             <!-- Ice Breaker -->
             <section>
                 <h2>Ice Breaker: Site Studio</h2>
                 <p><a href="https://tools.cuny.qzz.io/site-studio/" target="_blank">tools.cuny.qzz.io/site-studio/</a></p>
-                <p class="highlight-green">Model: Claude Sonnet 4.5</p>
-                <p class="fragment small-text">After initial demo, we'll solicit follow-up prompts from participants</p>
+                <p class="highlight-green">Powered by Claude Sonnet 4.5</p>
+                <p class="fragment small-text">After the opening demo, share your ideas for follow-up prompts</p>
             </section>
 
             <!-- Command Line Section -->
@@ -129,7 +135,8 @@
             <section>
                 <h3>Command Line Syntax</h3>
                 <pre><code class="bash">command --option &lt;placeholder-argument&gt;</code></pre>
-                <p class="fragment small-text">Example: <code>mkdir my-project</code></p>
+                <p class="fragment small-text">Example:</p>
+                <pre class="fragment"><code class="bash">mkdir my-project</code></pre>
             </section>
 
             <!-- Installing Gemini CLI -->
@@ -139,22 +146,26 @@
 
             <section>
                 <h3>Windows (PowerShell)</h3>
-                <ol>
-                    <li>Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></li>
-                    <li class="fragment">Install Gemini CLI:
-                        <pre><code class="bash">npm install -g @google/gemini-cli</code></pre>
-                    </li>
-                </ol>
+                <p class="small-text">Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></p>
+                <p class="fragment small-text">Install Gemini CLI:</p>
+                <pre class="fragment"><code class="bash">npm install -g @google/gemini-cli</code></pre>
             </section>
 
             <section>
                 <h3>macOS (Terminal)</h3>
-                <ol>
-                    <li>Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></li>
-                    <li class="fragment">Install Gemini CLI:
-                        <pre><code class="bash">brew install gemini-cli</code></pre>
-                    </li>
-                </ol>
+                <p class="small-text">Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></p>
+                <p class="fragment small-text">Install Gemini CLI:</p>
+                <pre class="fragment"><code class="bash">brew install gemini-cli</code></pre>
+            </section>
+
+            <section>
+                <h3>Login Setup</h3>
+                <p>After installation, run <code>gemini</code> to authenticate with Google</p>
+                <p class="fragment small-text">Choose "Login with Google" and follow the browser prompt</p>
+                <p class="fragment small-text">Free tier: 60 requests/min, 1,000 requests/day</p>
+                <div class="fragment">
+                    <p class="highlight-blue small-text">Having technical issues? Just ask!</p>
+                </div>
             </section>
 
             <!-- Project Tracks -->
@@ -175,73 +186,37 @@
             </section>
 
             <section>
+                <h2>Start with a README</h2>
+                <p>Ask the agent to create a README.md file first</p>
+                <p class="small-text highlight-blue">This helps you understand and approve the workflow before building</p>
+                <p class="fragment small-text">The README should:</p>
+                <p class="fragment small-text">Describe your project idea</p>
+                <p class="fragment small-text">Outline the project structure</p>
+                <p class="fragment small-text">List key features or goals</p>
+            </section>
+
+            <section>
                 <h2>Hands-On Activity</h2>
-                <p><strong>Duration:</strong> 15-20 minutes (or whatever you want!)</p>
+                <p>After approving the README.md, work with the agent to implement the plan from your README</p>
+                <p class="fragment"><strong>Duration:</strong> 15-20 minutes</p>
                 <p class="fragment">We'll walk around the room to help</p>
                 <p class="fragment small-text">Choose your track and start building!</p>
             </section>
 
-            <!-- Google AI Student Account -->
+            <!-- Resources -->
             <section>
-                <h2>Free Google AI for Students</h2>
-                <p class="highlight-green">1-year free trial of Google AI Pro plan</p>
-                <ul class="small-text">
-                    <li>Gemini "Pro" access</li>
-                    <li>Deep Research</li>
-                    <li>NotebookLM upgrades</li>
-                    <li>2TB storage</li>
-                </ul>
-                <p class="fragment small-text">Requires SheerID verification and personal Gmail</p>
-                <p class="fragment small-text">Auto-renews at $19.99/mo after year (can cancel)</p>
-            </section>
-
-            <!-- Additional Tools -->
-            <section>
-                <h2>More AI Development Tools</h2>
-            </section>
-
-            <section>
-                <h3>GitHub Copilot</h3>
-                <p>AI pair programmer integrated into your editor</p>
-                <ul class="small-text fragment">
-                    <li>Code suggestions as you type</li>
-                    <li>Supports multiple languages</li>
-                    <li>Available in VS Code, JetBrains, and more</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>GitHub Desktop</h3>
-                <p>Visual interface for Git version control</p>
-                <ul class="small-text fragment">
-                    <li>No command line needed</li>
-                    <li>Easy commit and branch management</li>
-                    <li>Perfect for beginners</li>
-                </ul>
-            </section>
-
-            <!-- Final Demo -->
-            <section>
-                <h2>Final Demo</h2>
-                <h1 class="highlight-blue">Claude Code</h1>
-                <p class="fragment">AI assistant for your entire development workflow</p>
-            </section>
-
-            <section>
-                <h3>What is Claude Code?</h3>
-                <ul>
-                    <li class="fragment">Command-line AI assistant</li>
-                    <li class="fragment">Reads, edits, and creates files</li>
-                    <li class="fragment">Runs commands and tests</li>
-                    <li class="fragment">Understands your entire codebase</li>
-                </ul>
+                <h2>Resources</h2>
+                <p><strong><a href="https://code.anthropic.com/" target="_blank">Claude Code</a></strong> - AI assistant for your entire development workflow</p>
+                <p class="fragment"><strong><a href="https://gemini.google/students/" target="_blank">Google AI for Students</a></strong> - 1-year free trial (requires SheerID verification)</p>
+                <p class="fragment"><strong><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></strong> - AI code suggestions in your editor</p>
+                <p class="fragment"><strong><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></strong> - Visual Git interface, no command line needed</p>
             </section>
 
             <!-- Closing -->
             <section>
                 <h2>Thank You!</h2>
                 <p>Questions?</p>
-                <p class="fragment small-text">Let's build something amazing together</p>
+                <p class="fragment small-text">Happy building!</p>
             </section>
 
         </div>
