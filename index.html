@@ -78,6 +78,51 @@
                 <p class="fragment small-text">After the opening demo, share your ideas for follow-up prompts</p>
             </section>
 
+            <!-- LLM Fundamentals Section -->
+            <section>
+                <h2>Understanding Large Language Models</h2>
+                <p>What's happening under the hood?</p>
+            </section>
+
+            <section>
+                <h3>How Do LLMs Work for Coding?</h3>
+                <p class="small-text">LLMs are trained on billions of lines of code from open-source projects, documentation, and Stack Overflow</p>
+                <div class="fragment">
+                    <p class="small-text highlight-blue">They predict what code should come next based on patterns</p>
+                    <p class="small-text">Can complete functions, suggest implementations, explain code, and debug errors</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text"><strong>Command-line agents</strong> (like Gemini CLI) can execute commands, read/write files, and iterate on code</p>
+                    <p class="small-text">Different from chat interfaces - they actively interact with your development environment</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Limitations for Coding</h3>
+                <ul class="small-text">
+                    <li class="fragment"><strong>Generates plausible but broken code</strong> - Syntax may look right but logic can be flawed</li>
+                    <li class="fragment"><strong>Outdated libraries/syntax</strong> - May suggest deprecated methods or old versions</li>
+                    <li class="fragment"><strong>Security vulnerabilities</strong> - Can generate code with SQL injection, XSS, or other security issues</li>
+                    <li class="fragment"><strong>Can't understand your full codebase</strong> - Limited context window means it doesn't see everything</li>
+                    <li class="fragment"><strong>You must verify and test</strong> - Always review, understand, and test generated code</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Prompt Engineering Basics</h3>
+                <p class="small-text">How you ask matters as much as what you ask</p>
+                <div class="fragment">
+                    <p class="small-text highlight-green"><strong>Be specific:</strong> "Create a Python function that sorts a list of dictionaries by the 'date' key"</p>
+                    <p class="small-text">vs. "Help me sort some data"</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-blue"><strong>Provide context:</strong> Share relevant code, error messages, project structure</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-orange"><strong>Iterate:</strong> Refine your prompts based on results</p>
+                </div>
+            </section>
+
             <!-- Command Line Section -->
             <section>
                 <h2>Command Line Basics</h2>
@@ -175,6 +220,69 @@
                 </div>
             </section>
 
+            <!-- Ethics & Critical Reflection Section -->
+            <section>
+                <h2>Critical Questions</h2>
+                <p>Before we build, let's pause and reflect</p>
+            </section>
+
+            <section>
+                <h3>Ethical Challenges</h3>
+                <div class="fragment">
+                    <p class="small-text highlight-blue"><strong>Academic Integrity</strong></p>
+                    <p class="small-text">How do we cite AI-assisted work? What's collaboration vs. skills offloading?</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-green"><strong>Bias & Fairness</strong></p>
+                    <p class="small-text">AI models reflect biases in their training data</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-orange"><strong>Environmental Impact</strong></p>
+                    <p class="small-text">Training and running AI systems consume significant energy</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Power & Labor Considerations</h3>
+                <div class="fragment">
+                    <p class="small-text"><strong>Who builds these systems?</strong></p>
+                    <p class="small-text">Often underpaid workers label data and moderate content</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text"><strong>Who controls AI?</strong></p>
+                    <p class="small-text">Major tech companies control development and access</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text"><strong>Privacy concerns</strong></p>
+                    <p class="small-text">What data are you sharing? How is it used for training?</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Why Use AI Coding Tools, then?</h3>
+                <ul class="small-text">
+                    <li class="fragment">Speeds up repetitive tasks (boilerplate code, file structure setup)</li>
+                    <li class="fragment">Helps learn new languages/frameworks by example</li>
+                    <li class="fragment">Debugging assistance and explaining error messages</li>
+                    <li class="fragment">Documentation and code explanation</li>
+                    <li class="fragment">Prototyping and exploring ideas quickly</li>
+                    <li class="fragment">Reduces context switching (staying in terminal vs. searching Stack Overflow)</li>
+                    <li class="fragment">Democratizes access to coding for people without CS backgrounds</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>When NOT to Use AI</h3>
+                <ul class="small-text">
+                    <li class="fragment">When learning fundamentals for the first time</li>
+                    <li class="fragment">For sensitive or confidential data/code</li>
+                    <li class="fragment">When you need guaranteed accuracy (medical, legal, safety-critical)</li>
+                    <li class="fragment">When the goal is to develop your own problem-solving skills</li>
+                    <li class="fragment">When it would violate academic or professional policies</li>
+                </ul>
+                <p class="fragment small-text highlight-blue"><strong>Use AI as a tool, not a replacement for understanding</strong></p>
+            </section>
+
             <!-- Project Tracks -->
             <section>
                 <h2>Choose Your Project Track</h2>
@@ -208,6 +316,39 @@
                 <p class="fragment"><strong>Duration:</strong> 15-20 minutes</p>
                 <p class="fragment">We'll walk around the room to help</p>
                 <p class="fragment small-text">Choose your track and start building!</p>
+            </section>
+
+            <!-- Reflection Section -->
+            <section>
+                <h2>Let's Reflect</h2>
+                <p>What did we learn?</p>
+            </section>
+
+            <section>
+                <h3>Discussion: Your Experience</h3>
+                <ul class="small-text">
+                    <li class="fragment"><strong>What worked well?</strong> When did the AI agent help most?</li>
+                    <li class="fragment"><strong>What didn't work?</strong> When did you get stuck or frustrated?</li>
+                    <li class="fragment"><strong>Surprises?</strong> Did the AI do anything unexpected (good or bad)?</li>
+                    <li class="fragment"><strong>Trust & verification:</strong> How did you know if the generated code was correct?</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Critical Assessment</h3>
+                <p class="small-text">Think about these questions:</p>
+                <div class="fragment">
+                    <p class="small-text highlight-blue">When is AI-assisted coding <strong>appropriate</strong> for your work?</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-orange">When might it be <strong>inappropriate</strong> or problematic?</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text highlight-green">How would you document/cite that you used AI in a project?</p>
+                </div>
+                <div class="fragment">
+                    <p class="small-text">What skills do you still need to develop yourself?</p>
+                </div>
             </section>
 
             <!-- Resources -->
