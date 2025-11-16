@@ -43,6 +43,19 @@ Let's get comfortable with the terminal
 
 ---
 
+### What is the Terminal?
+
+A **terminal** (or command line) is a text-based interface for controlling your computer
+
+Instead of clicking buttons and icons, you type commands
+
+Why use it?
+- More powerful and precise control
+- Essential for development work
+- How AI coding agents interact with your system
+
+---
+
 ### Opening Your Terminal
 
 **Mac:**
