@@ -45,19 +45,30 @@
         <div class="slides">
 
             <!-- Title Slide -->
-            <section class="title-slide">
-                <h1>Co-Developing with Generative AI</h1>
+            <section class="title-slide" style="padding-bottom: 140px;">
+                <h1 style="font-size: 1.5em;">Co-Developing with Generative AI</h1>
                 <p>Introduction to Command Line Agents</p>
+                <p style="margin-top: 1em; font-size: 0.5em; margin-bottom: 0.5em;">Facilitated by Steve Zweibel, Stefano Morello, and Zach Muhlbauer</p>
+                <p style="font-size: 0.5em;">Monday, November 18, 2025</p>
+                <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 25px; align-items: center;">
+                    <div style="background: white; padding: 10px; border-radius: 6px; display: flex; align-items: center;">
+                        <img src="img/lib.png" alt="Library Logo" style="height: 70px; display: block;">
+                    </div>
+                    <div style="background: white; padding: 10px; border-radius: 6px; display: flex; align-items: center;">
+                        <img src="img/nml.png" alt="NML Logo" style="height: 70px; display: block;">
+                    </div>
+                    <div style="background: white; padding: 10px; border-radius: 6px; display: flex; align-items: center;">
+                        <img src="img/tlc.png" alt="TLC Logo" style="height: 70px; display: block;">
+                    </div>
+                </div>
             </section>
 
             <!-- Tools Overview -->
-            <section>
+            <section class="title-slide">
                 <h2>Today's Tools</h2>
-                <ul class="small-text">
-                    <li>Site Studio</li>
-                    <li class="fragment">Terminal/PowerShell</li>
-                    <li class="fragment">Gemini CLI</li>
-                </ul>
+                <p>Site Studio</p>
+                <p class="fragment">Terminal/PowerShell</p>
+                <p class="fragment">Gemini CLI</p>
             </section>
 
             <!-- Important Notice -->
@@ -96,7 +107,8 @@
                     </li>
                     <li class="fragment"><strong>Command-line agents</strong> (like Gemini CLI) can execute commands, read/write files, and iterate on code
                         <ul>
-                            <li>Different from chat interfaces - they actively interact with your development environment</li>
+                            <li>Different from chat interfaces</li>
+                            <li>Actively interact with your development environment</li>
                         </ul>
                     </li>
                 </ul>
@@ -123,11 +135,6 @@
                     <li class="fragment"><strong>Can't understand your full codebase</strong>
                         <ul>
                             <li>Limited context window means it doesn't see everything</li>
-                        </ul>
-                    </li>
-                    <li class="fragment"><strong>You must verify and test</strong>
-                        <ul>
-                            <li>Always review, understand, and test generated code</li>
                         </ul>
                     </li>
                 </ul>
@@ -185,7 +192,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="title-slide">
                 <h3>Essential Commands</h3>
                 <table class="small-text">
                     <tr>
@@ -271,11 +278,10 @@
             <section>
                 <h3>Why Use AI Coding Tools, then?</h3>
                 <ul class="small-text">
-                    <li>Speeds up repetitive tasks (boilerplate code, file structure setup)</li>
+                    <li>Prototyping and exploring ideas quickly</li>
                     <li class="fragment">Helps learn new languages/frameworks by example</li>
                     <li class="fragment">Debugging assistance and explaining error messages</li>
                     <li class="fragment">Documentation and code explanation</li>
-                    <li class="fragment">Prototyping and exploring ideas quickly</li>
                     <li class="fragment">Reduces context switching (stay in your terminal)</li>
                     <li class="fragment">Democratizes access to coding for people without CS backgrounds</li>
                 </ul>
@@ -297,14 +303,14 @@
             <section>
                 <h2>Choose Your Project Track</h2>
                 <ul class="small-text">
-                    <li><strong class="highlight-blue">Website</strong>
+                    <li><strong class="highlight-blue">Website</strong> (e.g. Portfolio, link tree, small HTML/CSS/JS pages)
                         <ul>
-                            <li>Portfolio, link tree, small HTML/CSS/JS pages</li>
+                            <li class="fragment"><em>Example:</em> Create an scaffolded study guide for command line basics with inline CSS and JavaScript</li>
                         </ul>
                     </li>
-                    <li class="fragment"><strong class="highlight-green">Visualization</strong>
+                    <li class="fragment"><strong class="highlight-green">Visualization</strong> (e.g. Simple map, chart, or interactive element)
                         <ul>
-                            <li>Simple map, chart, or interactive element</li>
+                            <li class="fragment"><em>Example:</em> Build an interactive timeline visualizing events in the history of computing based on the Wikipedia page for the topic</li>
                         </ul>
                     </li>
                 </ul>
@@ -330,7 +336,7 @@
 
             <section>
                 <h2>Hands-On Activity</h2>
-                <p>After approving the README.md, work with the agent to implement the project outline</p>
+                <p>After approving the README.md, work with the agent to implement the project components</p>
                 <p class="fragment"><strong>Duration:</strong> 15-20 minutes</p>
                 <p class="fragment">We'll walk around the room to help</p>
                 <p class="fragment small-text">Choose your track and start building!</p>
