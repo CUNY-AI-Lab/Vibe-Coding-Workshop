@@ -12,6 +12,9 @@
         .reveal h1, .reveal h2, .reveal h3 {
             text-transform: none;
         }
+        .reveal .slides section {
+            text-align: left;
+        }
         .reveal code {
             background: #3f3f3f;
             padding: 2px 6px;
@@ -27,10 +30,13 @@
             color: #5df4a2;
         }
         .highlight-orange {
-            color: #ff9500;
+            color: #ffa500;
         }
         .small-text {
             font-size: 0.8em;
+        }
+        .reveal .slides section.title-slide {
+            text-align: center;
         }
     </style>
 </head>
@@ -39,7 +45,7 @@
         <div class="slides">
 
             <!-- Title Slide -->
-            <section>
+            <section class="title-slide">
                 <h1>Co-Developing with Generative AI</h1>
                 <p>Introduction to Command Line Agents</p>
             </section>
@@ -47,31 +53,26 @@
             <!-- Tools Overview -->
             <section>
                 <h2>Today's Tools</h2>
-                <p class="fragment">Site Studio</p>
-                <p class="fragment">Terminal/PowerShell</p>
-                <p class="fragment">Gemini CLI</p>
+                <ul class="small-text">
+                    <li>Site Studio</li>
+                    <li class="fragment">Terminal/PowerShell</li>
+                    <li class="fragment">Gemini CLI</li>
+                </ul>
             </section>
 
             <!-- Important Notice -->
             <section>
                 <h2>Before We Start</h2>
-                <div class="fragment">
-                    <p class="highlight-blue">Using lab computers?</p>
-                    <p class="small-text">Sign in now</p>
-                </div>
-                <div class="fragment">
-                    <p class="highlight-green">Brought your own computer?</p>
-                    <p class="small-text">Make sure you can access your terminal/PowerShell</p>
-                </div>
-                <div class="fragment">
-                    <p class="highlight-orange"><strong>Everyone:</strong></p>
-                    <p class="small-text">We'll help you install required tools as we go</p>
-                </div>
-                <p class="fragment small-text">Need help? Just ask!</p>
+                <ul class="small-text">
+                    <li><strong class="highlight-blue">Using lab computers?</strong> Sign in now</li>
+                    <li class="fragment"><strong class="highlight-green">Brought your own computer?</strong> Make sure you can access your terminal/PowerShell</li>
+                    <li class="fragment"><strong class="highlight-orange">Everyone:</strong> We'll help you install required tools as we go</li>
+                    <li class="fragment">Need help? Just ask!</li>
+                </ul>
             </section>
 
             <!-- Ice Breaker -->
-            <section>
+            <section class="title-slide">
                 <h2>Ice Breaker: Site Studio</h2>
                 <p><a href="https://tools.cuny.qzz.io/site-studio/" target="_blank">tools.cuny.qzz.io/site-studio/</a></p>
                 <p class="highlight-green">Powered by Claude Sonnet 4.5</p>
@@ -79,52 +80,71 @@
             </section>
 
             <!-- LLM Fundamentals Section -->
-            <section>
+            <section class="title-slide">
                 <h2>Understanding Large Language Models</h2>
                 <p>What's happening under the hood?</p>
             </section>
 
             <section>
                 <h3>How Do LLMs Work for Coding?</h3>
-                <p class="small-text">LLMs are trained on billions of lines of code from open-source projects, documentation, and Stack Overflow</p>
-                <div class="fragment">
-                    <p class="small-text highlight-blue">They predict what code should come next based on patterns</p>
-                    <p class="small-text">Can complete functions, suggest implementations, explain code, and debug errors</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text"><strong>Command-line agents</strong> (like Gemini CLI) can execute commands, read/write files, and iterate on code</p>
-                    <p class="small-text">Different from chat interfaces - they actively interact with your development environment</p>
-                </div>
+                <ul class="small-text">
+                    <li>LLMs are trained on billions of lines of code from open-source projects, documentation, and Stack Overflow</li>
+                    <li class="fragment"><strong>They predict what code should come next based on patterns</strong>
+                        <ul>
+                            <li>Can complete functions, suggest implementations, explain code, and debug errors</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>Command-line agents</strong> (like Gemini CLI) can execute commands, read/write files, and iterate on code
+                        <ul>
+                            <li>Different from chat interfaces - they actively interact with your development environment</li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
 
             <section>
                 <h3>Limitations for Coding</h3>
                 <ul class="small-text">
-                    <li class="fragment"><strong>Generates plausible but broken code</strong> - Syntax may look right but logic can be flawed</li>
-                    <li class="fragment"><strong>Outdated libraries/syntax</strong> - May suggest deprecated methods or old versions</li>
-                    <li class="fragment"><strong>Security vulnerabilities</strong> - Can generate code with SQL injection, XSS, or other security issues</li>
-                    <li class="fragment"><strong>Can't understand your full codebase</strong> - Limited context window means it doesn't see everything</li>
-                    <li class="fragment"><strong>You must verify and test</strong> - Always review, understand, and test generated code</li>
+                    <li><strong>Generates plausible but broken code</strong>
+                        <ul>
+                            <li>Syntax may look right but logic can be flawed</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>Outdated libraries/syntax</strong>
+                        <ul>
+                            <li>May suggest deprecated methods or old versions</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>Security vulnerabilities</strong>
+                        <ul>
+                            <li>Can create code with security flaws that could be exploited</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>Can't understand your full codebase</strong>
+                        <ul>
+                            <li>Limited context window means it doesn't see everything</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>You must verify and test</strong>
+                        <ul>
+                            <li>Always review, understand, and test generated code</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
 
             <section>
                 <h3>Prompt Engineering Basics</h3>
                 <p class="small-text">How you ask matters as much as what you ask</p>
-                <div class="fragment">
-                    <p class="small-text highlight-green"><strong>Be specific:</strong> "Create a Python function that sorts a list of dictionaries by the 'date' key"</p>
-                    <p class="small-text">vs. "Help me sort some data"</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-blue"><strong>Provide context:</strong> Share relevant code, error messages, project structure</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-orange"><strong>Iterate:</strong> Refine your prompts based on results</p>
-                </div>
+                <ul class="small-text">
+                    <li><strong class="highlight-green">Be specific:</strong> "Create a Python function that sorts a list of dictionaries by the 'date' key" vs. "Help me sort some data"</li>
+                    <li class="fragment"><strong class="highlight-blue">Provide context:</strong> Share relevant code, error messages, project structure</li>
+                    <li class="fragment"><strong class="highlight-orange">Iterate:</strong> Refine your prompts based on results</li>
+                </ul>
             </section>
 
             <!-- Command Line Section -->
-            <section>
+            <section class="title-slide">
                 <h2>Command Line Basics</h2>
                 <p>Let's get comfortable with the terminal</p>
             </section>
@@ -192,118 +212,120 @@
             </section>
 
             <!-- Installing Gemini CLI -->
-            <section>
+            <section class="title-slide">
                 <h2>Installing Gemini CLI</h2>
             </section>
 
             <section>
                 <h3>Windows (PowerShell)</h3>
-                <p class="small-text">Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></p>
-                <p class="fragment small-text">Install Gemini CLI:</p>
+                <ul class="small-text">
+                    <li>Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></li>
+                    <li class="fragment">Install Gemini CLI:</li>
+                </ul>
                 <pre class="fragment"><code class="bash">npm install -g @google/gemini-cli</code></pre>
             </section>
 
             <section>
                 <h3>macOS (Terminal)</h3>
-                <p class="small-text">Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></p>
-                <p class="fragment small-text">Install Gemini CLI:</p>
+                <ul class="small-text">
+                    <li>Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></li>
+                    <li class="fragment">Install Gemini CLI:</li>
+                </ul>
                 <pre class="fragment"><code class="bash">brew install gemini-cli</code></pre>
             </section>
 
             <section>
                 <h3>Login Setup</h3>
-                <p>After installation, run <code>gemini</code> to authenticate with Google</p>
-                <p class="fragment small-text">Choose "Login with Google" and follow the browser prompt</p>
-                <p class="fragment small-text">Free tier: 60 requests/min, 1,000 requests/day</p>
-                <div class="fragment">
-                    <p class="highlight-blue small-text">Having technical issues? Just ask!</p>
-                </div>
+                <ul class="small-text">
+                    <li>After installation, run <code>gemini</code> to authenticate with Google</li>
+                    <li class="fragment">Choose "Login with Google" and follow the browser prompt</li>
+                    <li class="fragment">Free tier: 60 requests/min, 1,000 requests/day</li>
+                    <li class="fragment"><strong class="highlight-blue">Having technical issues? Just ask!</strong></li>
+                </ul>
             </section>
 
             <!-- Ethics & Critical Reflection Section -->
-            <section>
+            <section class="title-slide">
                 <h2>Critical Questions</h2>
                 <p>Before we build, let's pause and reflect</p>
             </section>
 
             <section>
                 <h3>Ethical Challenges</h3>
-                <div class="fragment">
-                    <p class="small-text highlight-blue"><strong>Academic Integrity</strong></p>
-                    <p class="small-text">How do we cite AI-assisted work? What's collaboration vs. skills offloading?</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-green"><strong>Bias & Fairness</strong></p>
-                    <p class="small-text">AI models reflect biases in their training data</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-orange"><strong>Environmental Impact</strong></p>
-                    <p class="small-text">Training and running AI systems consume significant energy</p>
-                </div>
+                <ul class="small-text">
+                    <li><strong class="highlight-blue">Academic Integrity</strong> - How do we cite AI-assisted work? What's collaboration vs. skills offloading?</li>
+                    <li class="fragment"><strong class="highlight-green">Bias & Fairness</strong> - AI models reflect biases in their training data</li>
+                    <li class="fragment"><strong class="highlight-orange">Environmental Impact</strong> - Training and running AI systems consume significant energy</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Power & Labor Considerations</h3>
-                <div class="fragment">
-                    <p class="small-text"><strong>Who builds these systems?</strong></p>
-                    <p class="small-text">Often underpaid workers label data and moderate content</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text"><strong>Who controls AI?</strong></p>
-                    <p class="small-text">Major tech companies control development and access</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text"><strong>Privacy concerns</strong></p>
-                    <p class="small-text">What data are you sharing? How is it used for training?</p>
-                </div>
+                <ul class="small-text">
+                    <li><strong class="highlight-blue">Who builds these systems?</strong> Often underpaid workers label data and moderate content</li>
+                    <li class="fragment"><strong class="highlight-green">Who controls AI?</strong> Major tech companies control development and access</li>
+                    <li class="fragment"><strong class="highlight-orange">Privacy concerns</strong> - What data are you sharing? How is it used for training?</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Why Use AI Coding Tools, then?</h3>
                 <ul class="small-text">
-                    <li class="fragment">Speeds up repetitive tasks (boilerplate code, file structure setup)</li>
+                    <li>Speeds up repetitive tasks (boilerplate code, file structure setup)</li>
                     <li class="fragment">Helps learn new languages/frameworks by example</li>
                     <li class="fragment">Debugging assistance and explaining error messages</li>
                     <li class="fragment">Documentation and code explanation</li>
                     <li class="fragment">Prototyping and exploring ideas quickly</li>
-                    <li class="fragment">Reduces context switching (staying in terminal vs. searching Stack Overflow)</li>
+                    <li class="fragment">Reduces context switching (stay in your terminal)</li>
                     <li class="fragment">Democratizes access to coding for people without CS backgrounds</li>
                 </ul>
             </section>
 
             <section>
                 <h3>When NOT to Use AI</h3>
+                <p class="small-text highlight-blue"><strong>Use AI as a tool, not a replacement for understanding</strong></p>
                 <ul class="small-text">
-                    <li class="fragment">When learning fundamentals for the first time</li>
+                    <li>When learning fundamentals for the first time</li>
                     <li class="fragment">For sensitive or confidential data/code</li>
                     <li class="fragment">When you need guaranteed accuracy (medical, legal, safety-critical)</li>
                     <li class="fragment">When the goal is to develop your own problem-solving skills</li>
                     <li class="fragment">When it would violate academic or professional policies</li>
                 </ul>
-                <p class="fragment small-text highlight-blue"><strong>Use AI as a tool, not a replacement for understanding</strong></p>
             </section>
 
             <!-- Project Tracks -->
             <section>
                 <h2>Choose Your Project Track</h2>
-                <div class="fragment">
-                    <p class="highlight-blue">Website</p>
-                    <p class="small-text">Portfolio, link tree, small HTML/CSS/JS pages</p>
-                </div>
-                <div class="fragment">
-                    <p class="highlight-green">Visualization</p>
-                    <p class="small-text">Simple map, chart, or interactive element</p>
-                </div>
+                <ul class="small-text">
+                    <li><strong class="highlight-blue">Website</strong>
+                        <ul>
+                            <li>Portfolio, link tree, small HTML/CSS/JS pages</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong class="highlight-green">Visualization</strong>
+                        <ul>
+                            <li>Simple map, chart, or interactive element</li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
 
             <section>
                 <h2>Start with a README</h2>
-                <p>Ask the agent to create a README.md file first</p>
-                <p class="small-text highlight-blue">This helps you understand and approve the workflow before building</p>
-                <p class="fragment small-text">The README should:</p>
-                <p class="fragment small-text">Describe your project idea</p>
-                <p class="fragment small-text">Outline the project structure</p>
-                <p class="fragment small-text">List key features or goals</p>
+                <ul class="small-text">
+                    <li>Ask the agent to create a README.md file first
+                        <ul>
+                            <li>This helps you understand and approve the workflow before building</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">The README should:
+                        <ul>
+                            <li>Describe your project idea</li>
+                            <li>Outline the project structure</li>
+                            <li>List key features or goals</li>
+                        </ul>
+                    </li>
+                </ul>
             </section>
 
             <section>
@@ -315,7 +337,7 @@
             </section>
 
             <!-- Reflection Section -->
-            <section>
+            <section class="title-slide">
                 <h2>Let's Reflect</h2>
                 <p>What did we learn?</p>
             </section>
@@ -323,7 +345,7 @@
             <section>
                 <h3>Discussion: Your Experience</h3>
                 <ul class="small-text">
-                    <li class="fragment"><strong>What worked well?</strong> When did the AI agent help most?</li>
+                    <li><strong>What worked well?</strong> When did the AI agent help most?</li>
                     <li class="fragment"><strong>What didn't work?</strong> When did you get stuck or frustrated?</li>
                     <li class="fragment"><strong>Surprises?</strong> Did the AI do anything unexpected (good or bad)?</li>
                     <li class="fragment"><strong>Trust & verification:</strong> How did you know if the generated code was correct?</li>
@@ -333,18 +355,12 @@
             <section>
                 <h3>Critical Assessment</h3>
                 <p class="small-text">Think about these questions:</p>
-                <div class="fragment">
-                    <p class="small-text highlight-blue">When is AI-assisted coding <strong>appropriate</strong> for your work?</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-orange">When might it be <strong>inappropriate</strong> or problematic?</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text highlight-green">How would you document/cite that you used AI in a project?</p>
-                </div>
-                <div class="fragment">
-                    <p class="small-text">What skills do you still need to develop yourself?</p>
-                </div>
+                <ul class="small-text">
+                    <li><strong>When is AI-assisted coding appropriate for your work?</strong></li>
+                    <li class="fragment"><strong>When might it be inappropriate or problematic?</strong></li>
+                    <li class="fragment"><strong>How would you document/cite that you used AI in a project?</strong></li>
+                    <li class="fragment"><strong>What skills do you still need to develop yourself?</strong></li>
+                </ul>
             </section>
 
             <!-- Resources -->
@@ -357,7 +373,7 @@
             </section>
 
             <!-- Closing -->
-            <section>
+            <section class="title-slide">
                 <h2>Thank You!</h2>
                 <p>Questions?</p>
                 <p class="fragment small-text">Happy building!</p>
