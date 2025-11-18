@@ -38,6 +38,23 @@
         .reveal .slides section.title-slide {
             text-align: center;
         }
+        .split-screen {
+            display: flex;
+            gap: 20px;
+        }
+        .split-screen .column {
+            flex: 1;
+        }
+        .split-screen h4 {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        .split-screen pre {
+            font-size: 0.38em;
+        }
+        .split-screen ul {
+            font-size: 0.7em;
+        }
     </style>
 </head>
 <body>
@@ -224,21 +241,32 @@
             </section>
 
             <section>
-                <h3>Windows (PowerShell)</h3>
-                <ul class="small-text">
-                    <li>Install Node.js: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org/en/download</a></li>
-                    <li class="fragment">Install Gemini CLI:</li>
-                </ul>
-                <pre class="fragment"><code class="bash">npm install -g @google/gemini-cli</code></pre>
-            </section>
-
-            <section>
-                <h3>macOS (Terminal)</h3>
-                <ul class="small-text">
-                    <li>Install Homebrew: <a href="https://brew.sh/" target="_blank">brew.sh</a></li>
-                    <li class="fragment">Install Gemini CLI:</li>
-                </ul>
-                <pre class="fragment"><code class="bash">brew install gemini-cli</code></pre>
+                <h3>Installation</h3>
+                <div class="split-screen">
+                    <div class="column">
+                        <h4>Windows (PowerShell)</h4>
+                        <ul>
+                            <li>Install Node.js LTS: <a href="https://nodejs.org/en/download" target="_blank">nodejs.org</a></li>
+                            <li class="fragment">Reopen PowerShell</li>
+                            <li class="fragment">Install Gemini CLI:</li>
+                        </ul>
+                        <pre class="fragment"><code class="bash">npm install -g @google/gemini-cli</code></pre>
+                    </div>
+                    <div class="column" style="flex: 1.5;">
+                        <h4>macOS (Terminal)</h4>
+                        <ul>
+                            <li>Install Homebrew: copy command from <a href="https://brew.sh/" target="_blank">brew.sh</a> and run in Terminal</li>
+                            <li class="fragment">Add Homebrew to PATH:</li>
+                        </ul>
+                        <pre class="fragment"><code class="bash">echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' \
+  >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"</code></pre>
+                        <ul>
+                            <li class="fragment">Install Gemini CLI:</li>
+                        </ul>
+                        <pre class="fragment"><code class="bash">brew install gemini-cli</code></pre>
+                    </div>
+                </div>
             </section>
 
             <section>
