@@ -1,5 +1,7 @@
 # Co-Developing with Generative AI
 
+> **Archival note.** This repository preserves *Co-Developing with Generative AI* as delivered at the New Media Lab, CUNY Graduate Center, on November 18, 2025. Its material has since been revised and expanded in the CUNY AI Lab's Fall 2026 Vibe Coding Series ([*Vibe Coding I: Foundations*](https://cuny-ai-lab.github.io/fall-2026-vibe-coding-i/) and [*Vibe Coding II: Building a Prototype*](https://cuny-ai-lab.github.io/fall-2026-vibe-coding-ii/)). Readers seeking current materials should consult those versions; the tools, models, and procedures described here may no longer reflect the Lab's practice.
+
 This repository contains a reveal.js presentation introducing command line agents for AI-powered development.
 
 ## Viewing the Presentation
